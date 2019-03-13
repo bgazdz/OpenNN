@@ -329,6 +329,10 @@ bool DataSet::is_binary_variable(const size_t& variable_index) const
 
     const size_t instances_number = indices_remaining.size();
 
+	const Vector<size_t>* used_instances_pointer = &used_instances;
+
+	free(used_instances_pointer);
+
     for(size_t i = 0; i < instances_number; i++)
     {
         if(data(indices_remaining[i],variable_index) == 0.0 || data(indices_remaining[i],variable_index) == 1.0)

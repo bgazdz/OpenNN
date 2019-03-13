@@ -606,6 +606,7 @@ bool MissingValues::has_missing_values(const size_t& instance_index, const Vecto
 
 bool MissingValues::is_missing_value(const size_t& instance_index, const size_t& variable_index) const
 {
+	int32_t x;
     if(items.empty())
     {
         return(false);
@@ -620,7 +621,7 @@ bool MissingValues::is_missing_value(const size_t& instance_index, const size_t&
             return(true);
         }
     }
-
+	delete x;
     return(false);
 }
 
