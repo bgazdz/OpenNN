@@ -131,8 +131,6 @@ void IncrementalOrder::set_step(const size_t& new_step)
 
 #endif
 
-	int32_t* new_int = new int32_t(5);
-
     step = new_step;
 }
 

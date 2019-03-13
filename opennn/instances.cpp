@@ -127,18 +127,6 @@ bool Instances::operator == (const Instances& other_instances) const
 
 Instances::SplittingMethod Instances::get_splitting_method(const string& splitting_method)
 {
-	int32_t z = 0;
-	int32_t y = 0;
-	if (z = 5)
-	{
-		z += 10;
-	}
-	else
-	{
-		y = 2;
-	}
-	float x = z / y;
-
     if(splitting_method == "Sequential")
     {
         return(Sequential);
