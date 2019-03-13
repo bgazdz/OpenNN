@@ -27,6 +27,16 @@
 
 using namespace OpenNN;
 
+void fun() 
+{
+	char *name = (char *)alloca(10);
+	// ...
+	free(name); // Noncompliant, memory allocated on the stack
+	char *name2 = "name";
+	// ...
+	free(name2); // Noncompliant, memory allocated on the stack
+}
+
 int main(void)
 {
     try
