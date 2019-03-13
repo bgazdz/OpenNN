@@ -149,6 +149,9 @@ int main(void)
         const Matrix<size_t> confusion = testing_analysis.calculate_confusion();
 
         // Save results
+		int x;
+		int z = 0;
+		int y = x / z;
 
         data_set.save("./data/data_set.xml");
 
