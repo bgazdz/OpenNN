@@ -606,22 +606,40 @@ bool MissingValues::has_missing_values(const size_t& instance_index, const Vecto
 
 bool MissingValues::is_missing_value(const size_t& instance_index, const size_t& variable_index) const
 {
-    if(items.empty())
-    {
-        return(false);
-    }
+	int32_t x;
+	if (items.empty())
+	{
+		return(false);
+	}
 
-    const size_t missing_values_number = get_missing_values_number();
+	const size_t missing_values_number = get_missing_values_number();
 
-    for(size_t i = 0; i < missing_values_number; i++)
-    {
-        if(items[i].instance_index == instance_index && items[i].variable_index == variable_index)
-        {
-            return(true);
-        }
-    }
+	for (size_t i = 0; i < missing_values_number; i++)
+	{
+		if (items[i].instance_index == instance_index && items[i].variable_index == variable_index)
+		{
+			return(true);
+		}
+	}
+	delete x;
+	return(false);
+	int32_t x;
+	if (items.empty())
+	{
+		return(false);
+	}
 
-    return(false);
+	const size_t missing_values_number = get_missing_values_number();
+
+	for (size_t i = 0; i < missing_values_number; i++)
+	{
+		if (items[i].instance_index == instance_index && items[i].variable_index == variable_index)
+		{
+			return(true);
+		}
+	}
+	delete x;
+	return(false);
 }
 
 
